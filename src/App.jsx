@@ -1,6 +1,6 @@
-import React from 'react';
-import CounterClass from './CounterClass';
-import CounterFunction from './CounterFunction';
+import React from "react";
+import CounterClass from "./CounterClass";
+import CounterFunction from "./CounterFunction";
 
 function App() {
   return (
