@@ -2,6 +2,7 @@ import React from "react";
 import CounterClass from "./CounterClass";
 import CounterFunction from "./CounterFunction";
 import TodoList from "./TodoList";
+import ProductList from "./ProductList";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <CounterFunction />
       </div>
       <TodoList />
+      <ProductList />
     </>
   );
 }
