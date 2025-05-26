@@ -85,7 +85,7 @@ Sau đó mở trình duyệt tại [http://localhost:5173](http://localhost:5173
 
 - **Nhóm 6**: Nhiệm vụ 2: _Component Paradigms: Functional vs Class & Props/State_
 - **Thành viên**:
-  - Nguyễn Thanh Hải
+  - Nguyễn Thanh Hai
   - Mai Thị Thu Hương
   - Nguyễn Ngọc Tiến
 - **Giảng viên hướng dẫn**: Thầy Tạ Chí Hiếu
