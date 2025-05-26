@@ -1,15 +1,22 @@
+// Import thư viện React
 import React from "react";
 
+// Định nghĩa component CanceledTask nhận vào 3 props:
+// - task: đối tượng công việc đã bị huỷ
+// - formatDateTime: hàm để định dạng ngày/giờ tạo công việc
+// - setTaskNew: hàm xử lý khi người dùng muốn chuyển công việc bị huỷ quay lại trạng thái mới
 function CanceledTask({ task, formatDateTime, setTaskNew }) {
   return (
     <div className="px-4 py-3 w-full rounded-md bg-white mt-6 border border-red-300 transition-all duration-300 todo-card">
       <div className="mb-3 flex items-start justify-between">
+        {/* Hiển thị thời gian tạo task */}
         <p className="text-xs text-gray-500" style={{ fontSize: "14px" }}>
           {formatDateTime(task.created_at)}
         </p>
+
         <div className="flex items-start gap-3">
           <svg
-            onClick={() => setTaskNew(task)}
+            onClick={() => setTaskNew(task)} // Khi click, gọi hàm setTaskNew để đưa task về trạng thái ban đầu
             xmlns="http://www.w3.org/2000/svg"
             className="icon cursor-pointer text-indigo-500 hover:text-indigo-600 text-2xl transition-colors duration-200"
             width="1em"
@@ -26,6 +33,8 @@ function CanceledTask({ task, formatDateTime, setTaskNew }) {
           </svg>
         </div>
       </div>
+
+      {/* Hiển thị nội dung công việc bị huỷ */}
       <div>
         <p
           className="text-gray-800 overflow-wrap-break-word"

@@ -1,15 +1,23 @@
+// Import thư viện React
 import React from "react";
 
+// Định nghĩa component FinishedTask nhận vào 3 props:
+// - task: đối tượng chứa thông tin công việc đã hoàn thành
+// - formatDateTime: hàm định dạng thời gian
+// - setTaskCanceled: hàm xử lý khi muốn chuyển trạng thái task sang "đã hủy"
 function FinishedTask({ task, formatDateTime, setTaskCanceled }) {
   return (
     <div className="px-4 py-3 w-full rounded-md bg-white mt-6 border border-green-300 transition-all duration-300 todo-card">
       <div className="mb-3 flex items-start justify-between">
+        {/* Hiển thị thời gian task được tạo, định dạng bằng hàm formatDateTime */}
         <p className="text-xs text-gray-500" style={{ fontSize: "14px" }}>
           {formatDateTime(task.created_at)}
         </p>
+
+        {/* Vùng chứa các nút chức năng (ở đây chỉ có 1 nút huỷ task) */}
         <div className="flex items-start gap-3">
           <svg
-            onClick={() => setTaskCanceled(task)}
+            onClick={() => setTaskCanceled(task)} // Gọi hàm xử lý khi người dùng click icon
             xmlns="http://www.w3.org/2000/svg"
             className="icon cursor-pointer text-red-500 hover:text-red-600 text-2xl transition-colors duration-200"
             width="1em"
@@ -26,6 +34,8 @@ function FinishedTask({ task, formatDateTime, setTaskCanceled }) {
           </svg>
         </div>
       </div>
+
+      {/* Nội dung chính của task (tên công việc) */}
       <div>
         <p
           className="text-gray-800 overflow-wrap-break-word"
